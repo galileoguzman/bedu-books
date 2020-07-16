@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+cd "$1" || exit 1
+# echo "-----> Compiling SCSS files"
+# python manage.py compilescss
+echo "-----> Collect static files"
+python manage.py collectstatic --noinput
+echo "-----> Runing migrations with ./manage.py migrate"
+python manage.py migrate
