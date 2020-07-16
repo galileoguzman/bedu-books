@@ -1,1 +1,10 @@
-<h1>Hola books</h1>
+<h1>Hola books {{ count }}</h1>
+
+<ul>
+    {% for b in books %}
+    <li>
+        {{ b.title }}
+        <img src="{{b.image.url}}" alt="" width="100" height="auto">
+    </li>
+    {% endfor %}
+</ul>
