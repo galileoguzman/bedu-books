@@ -3,8 +3,11 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 
+from books.views import home_books
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_books, name='index'),
 ]
 
 # Add static and media urls
